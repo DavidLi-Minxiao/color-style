@@ -1,0 +1,277 @@
+/*general starting design*/
+html{
+  overflow-x: hidden;
+}
+
+body{
+  font-family: "Helveitca Neue", Helvetica, Arial, sans-serif;
+  line-height: 1.8;
+}
+
+h1, h2, h3, h4, h5, h6, .bold, .emphasis, nav.navbar{
+  font-family: "Roboto Condensed", "Roboto", sans-serif;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+h1{
+  font-size: 300%;
+}
+
+h3{
+  margin-top: 10px;
+}
+
+hr{
+  margin-top: 5px;
+  margin-bottom: 15px;
+  border-width: 4px;
+  width:60px;
+  border-color: #0e250e;
+}
+
+hr.light{
+  border-color: #AAAAAA;
+  border-width: 2px;
+}
+
+.bold{
+  font-weight: bold;
+}
+
+small{
+  font-family: "Verdana", Arial, sans-serif;
+}
+
+div.row.row-inner{
+  margin-left:0;
+  margin-right:0;
+}
+
+img.img-responsive{
+  padding:10px;
+}
+
+div.row{
+  display: block;
+}
+
+div.row.inline{
+  margin-right: 0;
+  margin-left: 0;
+}
+
+ul{
+  margin-bottom: 0;
+}
+
+/*landing page layout*/
+section#home > div.homeBg{
+  top:0;
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  background-color: #262673;
+  background-image: url(../img/back-min.jpg);
+  background-position: center;
+  background-repeat: none;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+section#home > div.homeBg > div.content{
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  color: white;
+  font-size: 125%;
+}
+
+section#home >div.homeBg > div.content > div > h1{
+  padding-top:20px;
+  padding-bottom: 60px;
+}
+
+@media (min-width: 600px){
+  section#home > div.homeBg > div.content{
+    font-size: 175%;
+  }
+}
+
+@media (min-width: 900px){
+  section#home > div.homeBg > div.content{
+    font-size: 225%;
+  }
+
+  section#home >div.homeBg > div.content > div > h1{
+    padding-top:40px;
+    padding-bottom: 100px;
+  }
+}
+
+a.circleLink, a.circleLink:visited{
+  display:inline-block;
+  z-index:500;
+  text-align: center;
+  width: 50px;
+  height: 50px;
+  border-style: solid;
+  border-width: 2px;
+  border-color: white;
+  border-radius: 25px;
+  color:white;
+  text-decoration: none;
+  transition: all 0.5s;
+  position: absolute;
+}
+
+a#downArrow{
+  top: 85%;
+  left: 50%;
+  transform: translateX(-50%);
+  
+}
+
+a.circleLink > i{
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+
+a#downArrow:hover, a#downArrow:active{
+  background-color: white;
+  color: grey;
+  text-decoration: none;
+}
+
+/*sets floating bar and header stuff*/
+
+#about, #details, #services, #contact{
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+#about{
+  padding-top: 80px;
+}
+
+#contact{
+  padding-bottom: 80px;
+}
+
+nav.navbar{
+  margin-bottom: -70px;
+  border-width: 0 0 1px 0;
+  border-radius: 0;
+  font-weight: bold;
+}
+
+nav.navbar.navbar-fixed-top > div.container > div#mainNav > ul.nav.navbar-nav{
+  padding-right: 15px;
+}
+
+ul.nav.navbar-nav > li > a{
+  transition: all 0.3s;
+}
+
+/*details*/
+section#details{
+}
+
+/*services*/
+section#services{
+  background-color: #e6e6e6;
+}
+
+div.box{
+  padding: 25px;
+  margin-bottom: 20px;
+  background-color: white;
+}
+
+/*map*/
+#google_map {
+    height:300px;
+    width:100vw;
+}
+.gm-style-iw * {
+    display: block;
+    width: 100%;
+}
+.gm-style-iw h4, .gm-style-iw p {
+    margin: 0;
+    padding: 0;
+}
+.gm-style-iw a {
+    color: #4272db;
+}
+
+div.gm-style-cc{
+  display: none;
+}
+
+div.gm-style > div > a > div > img{
+  display: none;
+}
+
+small.gm-tm{
+  z-index: 10000;
+  float:right;
+  font-size: 10px;
+}
+
+/*form stuff*/
+form{
+  padding-bottom: 40px;
+}
+
+div.buttons{
+  width: 100%;
+  margin-bottom:100px;
+}
+
+@media (min-width: 768px){
+  div.buttons{
+    margin-top:50px;
+  }
+}
+
+a.circleLink#address{
+  border-color:grey;
+  background-color: grey;
+  left: 30%;
+  transform: translate(-50%);
+}
+
+a.circleLink#email{
+  border-color:green;
+  background-color: green;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+a.circleLink#phone{
+  border-color:grey;
+  background-color: grey;
+  left:70%;
+  transform: translate(-50%);
+}
+
+/*footer*/
+footer{
+  background-color: #e6e6e6;
+  padding: 10px 10px 0 10px;
+}
+
+.wide{
+  padding: 0;
+  margin-top: 60px;
+  height: 300px;
+  width: 100vw;
+  background-image: url(../img/3-min.jpg);
+  background-position: center;
+}
